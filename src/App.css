@@ -1,0 +1,207 @@
+.App {
+  text-align: center;
+  font-family: Arial, sans-serif;
+}
+
+header, footer {
+  background-color: #ff6600; /* Shopee header/footer color */
+  color: white; /* White text for contrast */
+  padding: 20px;
+  width: auto;
+}
+
+header {
+  display: flex;
+  justify-content: center; /* Center all items in the header */
+  align-items: center;
+  background-color: #ff6600; /* Shopee header color */
+  color: white;
+  padding: 20px;
+}
+
+h1 {
+  margin: 0; /* Remove margin */
+  font-size: 25px;
+  text-align: center; /* Center text in the heading */
+  flex-grow: 1; /* Allow h1 to take up available space */
+}
+.greeting {
+  text-align: left;
+  margin: 10px ;
+}
+
+.greeting h1 {
+  font-size: 20px;
+  margin-right: 1090px;
+  color: #ff6600; /* Shopee-like color */
+}
+
+.greeting p {
+  font-size: 16px;
+  color: #333; /* Darker color for contrast */
+}
+.category-nav {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  background-color: #f7f7f7;
+  border-bottom: 1px solid #ddd;
+}
+
+.category-nav button {
+  background-color: #ff6600; /* Shopee-like orange */
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  margin: 5px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: background-color 0.3s;
+}
+
+.category-nav button:hover {
+  background-color: #ff5500;
+}
+
+.category-nav .search-bar {
+  width: 300px;
+  padding: 10px;
+  margin: 5px;
+  border-color: #f1f1f1;
+  box-shadow: 0 4px 8px rgba(245, 241, 241, 0.1);
+  border-radius: 5px;
+  font-size: 14px;
+  outline: none;
+  transition: border-color 0.3s ease;
+}
+
+.category-nav .search-bar:focus {
+  border-color: #ff6600; /* Highlight on focus */
+}
+
+.item-list {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+  padding: 20px;
+}
+
+.item {
+  border: 1px solid #ddd;
+  color: #f1f1f1;
+  padding: 15px;
+  background-color: #ff6600;
+  text-align: center;
+  border-radius: 10px; /* Rounded corners */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+}
+
+.item-image {
+  width: 100px;
+  height: auto;
+  object-fit: cover;
+  margin-bottom: 10px;
+  border-radius: 10px; /* Rounded corners for images */
+}
+
+.edit-icon, .delete-icon {
+  font-size: 20px;
+  margin-left: 25px;
+  cursor: pointer;
+}
+
+.controls {
+  margin: 20px 0;
+  display: flex;
+  justify-content: space-between; /* Align buttons to the ends */
+}
+
+.controls button:active {
+  transform: scale(0.98); /* Slightly shrink button on click */
+}
+
+/* Dropdown styles */
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropbtn {
+  background-color: #ff6600;
+  color: rgb(255, 255, 255);
+  padding: 10px 15px;
+  font-size: 20px;
+  margin-left: 0; /* Align the dropdown button to the left */
+  border: none;
+  cursor: pointer;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+  left: 10px; /* Align the dropdown content to the left */
+}
+
+.dropdown-content a {
+  color:  #ff6600;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-content a:hover {
+  background-color: #f1f1f1;
+}
+
+/* Show the dropdown content when hovering */
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+/* Media Queries for Mobile Responsiveness */
+@media (max-width: 768px) {
+  .item-list {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px; /* Adjust gap for smaller screens */
+  }
+
+  .category-nav button {
+    padding: 8px 15px;
+    font-size: 14px;
+  }
+
+  .item {
+    padding: 15px;
+  }
+}
+
+@media (max-width: 480px) {
+  header, footer {
+    padding: 10px;
+  }
+
+  .item-list {
+    grid-template-columns: 2fr; /* Single column for small screens */
+  }
+
+  .item {
+    padding: 10px;
+  }
+
+  .item-image {
+    width:100%;
+    height: auto;
+    object-fit: contain;
+  }
+
+  .edit-icon, .delete-icon {
+    font-size: 20px;
+  }
+}
